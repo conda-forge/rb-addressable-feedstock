@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: generic
-  number: 0
+  number: 1
   script:
     - gem install --norc -l -V --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
@@ -19,9 +19,9 @@ build:
 
 requirements:
   host:
-    - ruby
+    - ruby >=2.7,<3
   run:
-    - ruby
+    - ruby >=2.7,<3
     - rb-public_suffix >=2.0.2,<5
 
 test:
@@ -43,3 +43,5 @@ about:
 extra:
   recipe-maintainers:
     - sodre
+    - svengiegerich
+    - janjagusch
