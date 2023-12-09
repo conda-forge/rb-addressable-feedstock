@@ -1,5 +1,5 @@
 {% set name = "addressable" %}
-{% set version = "2.8.5" %}
+{% set version = "2.8.6" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: 63f0fbcde42edf116d6da98a9437f19dd1692152f1efa3fcc4741e443c772117
+  sha256: 798f6af3556641a7619bad1dce04cdb6eb44b0216a991b0396ea7339276f2b47
 
 build:
   noarch: generic
