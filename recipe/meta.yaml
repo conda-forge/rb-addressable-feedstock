@@ -22,7 +22,7 @@ requirements:
     - ruby >=2.7,<3
   run:
     - ruby >=2.7,<3
-    - rb-public_suffix >=2.0.2,<5
+    - rb-public_suffix >=2.0.2,<6
 
 test:
   commands:
