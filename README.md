@@ -7,7 +7,7 @@ Home: https://rubygems.org/gems/addressable
 
 Package license: Apache-2.0
 
-Summary: Ruby bindings to http://github.com/ry/http-parser and http://github.com/a2800276/http-parser.java
+Summary: Addressable is an alternative implementation to the URI implementation that is part of Ruby's standard library. It is flexible, offers heuristic parsing, and additionally provides extensive support for IRIs and URI templates.
 
 Development: https://github.com/sporkmonger/addressable
 
