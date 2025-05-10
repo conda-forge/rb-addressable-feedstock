@@ -148,6 +148,7 @@ Feedstock Maintainers
 =====================
 
 * [@janjagusch](https://github.com/janjagusch/)
+* [@jdmarques](https://github.com/jdmarques/)
 * [@sodre](https://github.com/sodre/)
 * [@svengiegerich](https://github.com/svengiegerich/)
 

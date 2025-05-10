@@ -1,0 +1,48 @@
+schema_version: 1
+
+context:
+  name: addressable
+  version: 2.8.7
+
+package:
+  name: rb-${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://rubygems.org/downloads/${{ name }}-${{ version }}.gem
+  sha256: 462986537cf3735ab5f3c0f557f14155d778f4b43ea4f485a9deb9c8f7c58232
+
+build:
+  number: 2
+  noarch: generic
+  script:
+    - gem install --norc -l -V --ignore-dependencies ${{ name }}-${{ version }}.gem
+    - gem unpack ${{ name }}-${{ version }}.gem
+
+requirements:
+  host:
+    - ruby
+  run:
+    - ${{ pin_compatible('ruby', upper_bound='x.x') }}
+    - rb-public_suffix >=2.0.2,<7.0
+
+tests:
+  - script:
+      - ruby -r ${{ name }} -e 'exit 0'
+      - ruby -r ${{ name }}/uri -e 'exit 0'
+      - ruby -r ${{ name }}/template -e 'exit 0'
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE.txt
+  summary: "Addressable is an alternative implementation to the URI implementation that is part of Ruby's standard library. It is flexible, offers heuristic parsing, and additionally provides extensive support for IRIs and URI templates."
+  homepage: https://rubygems.org/gems/addressable
+  repository: https://github.com/sporkmonger/addressable
+  documentation: http://www.rubydoc.info/gems/addressable
+
+extra:
+  recipe-maintainers:
+    - jdmarques
+    - sodre
+    - svengiegerich
+    - janjagusch
