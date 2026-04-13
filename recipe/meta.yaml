@@ -21,7 +21,7 @@ requirements:
     - ruby
   run:
     - {{ pin_compatible('ruby', max_pin='x.x') }}
-    - rb-public_suffix >=2.0.2,<7.0
+    - rb-public_suffix >=2.0.2,<8.0
 
 test:
   commands:
